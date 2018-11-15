@@ -1,0 +1,41 @@
+﻿@{
+    //Layout = null;
+
+}
+
+<h1>My Cheese</h1>
+<!--
+<p><a href="/Cheese/Add">Add Cheese</a></p>
+    -->
+<p><a asp-controller="Cheese" asp-action="Add">Add Cheese</a></p>
+
+@if (ViewBag.cheeses.Count == 0)
+{
+    <p>No cheeses yet!</p>
+}
+else
+{
+    <dl>
+        @foreach (KeyValuePair<string, string> cheese in ViewBag.cheeses)
+        {
+            <dt><h3>@cheese.Key: </h3></dt>
+            <dd>@cheese.Value</dd>
+
+        }
+    </dl>
+    <br /><br />
+    <p><a asp-controller="Cheese" asp-action="Del">Delete Cheese</a></p>
+    <p><a asp-controller="Cheese" asp-action="DelMult">Delete Multiple Cheeses</a></p>
+
+}
+
+
+
+<!--
+<ul>
+    @@foreach (string cheese in ViewBag.cheeses)
+    {
+        <li>@@cheese</li>
+    }
+</ul>
+-->

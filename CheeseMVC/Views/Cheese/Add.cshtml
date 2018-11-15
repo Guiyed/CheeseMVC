@@ -1,0 +1,13 @@
+﻿@{
+    //Layout = null;
+}
+
+<h1> Add Cheese</h1>
+<form method="post">
+    <label>Name of the Cheese:</label>
+    <input name="name" type="text" /><span class="error">@ViewBag.inputError</span><br>
+    <label>Description:</label>
+    <input name="description" type="text" /><br><br>
+    <input type="submit" value="Add Cheese" />
+
+</form>

@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+
+    List<string> cheeses = new List<string>();
+
+    cheeses.Add("Mozzarella");
+    cheeses.Add("Munster");
+    cheeses.Add("Parmesan");
+
+
+}
+
+<h1>My Cheese</h1>
+
+<ul>
+    @foreach (string cheese in cheeses)
+    {
+        <li>@cheese</li>
+    }
+
+</ul>
